@@ -35,11 +35,11 @@ volumes:
     driver: local
     driver_opts:
       type: "nfs"
-      o: nolock,soft,rw
-      device: "10.2.2.246:/nfs/mediawiki/images"
+      o: "addr=10.2.2.246,nolock,soft,rw"
+      device: ":/nfs/mediawiki/images"
   db:
     driver: local
     driver_opts:
       type: "nfs"
-      o: nolock,soft,rw
-      device: "10.2.2.246:/nfs/mediawiki/db"
+      o: "addr=10.2.2.246,nolock,soft,rw"
+      device: ":/nfs/mediawiki/db"
