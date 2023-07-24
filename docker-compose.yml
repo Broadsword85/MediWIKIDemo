@@ -32,4 +32,14 @@ services:
 
 volumes:
   images:
+    driver: local
+    driver_opts:
+      type: "nfs"
+      o: nolock,soft,rw
+      device: "10.2.2.246:/nfs/mediawiki/images"
   db:
+    driver: local
+    driver_opts:
+      type: "nfs"
+      o: nolock,soft,rw
+      device: "10.2.2.246:/nfs/mediawiki/db"
