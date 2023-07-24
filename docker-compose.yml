@@ -32,13 +32,11 @@ services:
 
 volumes:
   images:
-    driver: local
     driver_opts:
       type: "nfs"
       o: "addr=10.2.2.246,nolock,soft,rw"
       device: ":/nfs/mediawiki/images"
   db:
-    driver: local
     driver_opts:
       type: "nfs"
       o: "addr=10.2.2.246,nolock,soft,rw"
